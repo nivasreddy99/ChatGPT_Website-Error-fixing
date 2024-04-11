@@ -10,8 +10,6 @@
     padding: 0;
     height: 100%;
     font-family: Arial, sans-serif;
-    color: #000; /* Text color for better contrast */
-    background: #fff; /* Background color for better contrast */
   }
   .bg-image {
     background-image: url('your-image-url.jpg');
@@ -20,12 +18,10 @@
     position: relative;
     height: 100%;
   }
-  .header, .footer, .login-form label, .button {
+  .header, .footer {
     text-align: center;
-    color: #000; /* Changed to black for better contrast */
-    background: #f8f8f8; /* Light grey background for better contrast */
-  }
-  .header {
+    color: #fff; /* White text */
+    background: #000; /* Black background for header and footer for high contrast */
     padding: 20px 0;
   }
   .footer {
@@ -46,18 +42,23 @@
     display: inline-block;
     text-align: left;
   }
+  .login-form label {
+    display: block;
+    margin: 10px 0;
+    color: #000; /* Black text for high contrast */
+  }
   .login-form input[type="text"],
   .login-form input[type="password"] {
     padding: 10px;
     margin: 10px 0;
     width: 200px;
     display: block;
-    border: 1px solid #000; /* Changed to black for better visibility */
-    background: #fff; /* White background for better contrast */
-    color: #000; /* Text color for better contrast */
+    border: 1px solid #000; /* Black border for high contrast */
+    background: #fff; /* White background for high contrast */
+    color: #000; /* Black text for high contrast */
   }
   .button {
-    background-color: #4CAF50; /* Keep this if it's already providing enough contrast */
+    background-color: #4CAF50; /* Green background for the button */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -67,6 +68,12 @@
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+  }
+  /* Additional styles for contrast and visibility */
+  button:not(.button) {
+    background-color: #555; /* Dark background for buttons */
+    color: #fff; /* White text for high contrast */
+    border: 1px solid #fff; /* White border for visibility */
   }
 </style>
 </head>
@@ -84,20 +91,13 @@
     
     <form class="login-form" aria-labelledby="loginFormLabel">
       <h2 id="loginFormLabel" style="color: white;">Login to Your Account</h2>
-      
       <label for="username" style="color: white;">Username</label>
       <input id="username" type="text" placeholder="Username" name="username" title="Enter your username">
-      
       <label for="password" style="color: white;">Password</label>
       <input id="password" type="password" placeholder="Password" name="password" title="Enter your password">
-      
       <button type="submit" class="button">Log In</button>
     </form>
   </main>
-
-  <nav role="navigation" class="navigation" style="text-align: center; background: rgba(0,0,0,0.8); padding: 10px; color: white;">
-    <!-- Add navigation links here -->
-  </nav>
 
   <footer role="contentinfo" class="footer">
     <p>Contact Us: email@example.com | +123 456 7890</p>
