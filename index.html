@@ -71,8 +71,13 @@
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-  }
-</style>
+  }.login-form label {
+      display: block;
+      margin-top: 10px;
+    }
+    
+    /* ... All other styles remain the same ... */
+  </style>
 </head>
 <body>
 
@@ -88,14 +93,13 @@
     
     <form class="login-form" aria-labelledby="loginFormLabel">
       <h2 id="loginFormLabel" style="color: white;">Login to Your Account</h2>
-      <div>
-        <label for="username" style="color: white;">Username</label>
-        <input id="username" type="text" placeholder="Username" name="username">
-      </div>
-      <div>
-        <label for="password" style="color: white;">Password</label>
-        <input id="password" type="password" placeholder="Password" name="password">
-      </div>
+      
+      <label for="username" style="color: white;">Username</label>
+      <input id="username" type="text" placeholder="Username" name="username" title="Enter your username">
+      
+      <label for="password" style="color: white;">Password</label>
+      <input id="password" type="password" placeholder="Password" name="password" title="Enter your password">
+      
       <button type="submit" class="button">Log In</button>
     </form>
   </main>
